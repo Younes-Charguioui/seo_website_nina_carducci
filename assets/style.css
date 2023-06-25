@@ -6,10 +6,7 @@ body {
 	font-family: 'Inter';
 	font-style: normal;
 }
-img {
-  width: 100%; /* or max-width: 100%; */
-  height: auto;
-}
+
 .top-header {
 	background-color: white;
 	position: sticky;
@@ -73,8 +70,8 @@ img {
 
 .picture img {
 	width: 100%;
-
 }
+
 #about-me {
 	flex: 2
 }
