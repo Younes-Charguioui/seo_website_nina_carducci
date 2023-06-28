@@ -16,11 +16,6 @@
       $(this)
         .children(".gallery-item")
         .each(function(index) {
-          /*console.log($(this));
-          console.log($(this).children());
-          $.fn.mauGallery.methods.responsiveImageItem($(this));
-          $.fn.mauGallery.methods.moveItemInRowWrapper($(this));
-          $.fn.mauGallery.methods.wrapItemInColumn($(this), options.columns);*/
           $.fn.mauGallery.methods.responsiveImageItem($(this).children());
           $.fn.mauGallery.methods.moveItemInRowWrapper($(this));
           $.fn.mauGallery.methods.wrapItemInColumn($(this), options.columns);
@@ -117,7 +112,6 @@
     responsiveImageItem(element) {
       if (element.prop("tagName") === "IMG") {
         element.addClass("img-fluid");
-      } else if (element.prop("tagName") === "PICTURE") {
       }
     },
     openLightBox(element, lightboxId) {
@@ -133,7 +127,7 @@
           activeImage = $(this);
         }
       });
-      let activeTag = $(".tags-bar span.active-tag").data("images-toggle");
+      let activeTag = $(".tags-bar a.active-tag").data("images-toggle");
       let imagesCollection = [];
       if (activeTag === "all") {
         $(".item-column").each(function() {
@@ -173,11 +167,12 @@
           activeImage = $(this);
         }
       });
-      let activeTag = $(".tags-bar span.active-tag").data("images-toggle");
+      let activeTag = $(".tags-bar a.active-tag").data("images-toggle");
       let imagesCollection = [];
       if (activeTag === "all") {
         $(".item-column").each(function() {
           if ($(this).children("picture").children("img").length) {
+
             imagesCollection.push($(this).children("picture").children("img"));
           }
         });
@@ -194,7 +189,6 @@
       }
       let index = 0,
         next = null;
-
       $(imagesCollection).each(function(i) {
         if ($(activeImage).attr("src") === $(this).attr("src")) {
           index = i;
@@ -228,12 +222,12 @@
     },
     showItemTags(gallery, position, tags) {
       var tagItems =
-        '<li class="nav-item"><span class="nav-link active active-tag"  data-images-toggle="all">Tous</span></li>';
+        '<li class="nav-item"><a class="nav-link active active-tag" href="" onclick="return false" data-images-toggle="all">Tous</a></li>';
       $.each(tags, function(index, value) {
         tagItems += `<li class="nav-item active">
-                <span class="nav-link"  data-images-toggle="${value}">${value}</span></li>`;
+                <a class="nav-link" href="" onclick="return false" data-images-toggle="${value}">${value}</a></li>`;
       });
-      var tagsRow = `<ul class="my-4 tags-bar nav nav-pills">${tagItems}</ul>`;
+      var tagsRow = `<ul class="my-4 tags-bar nav nav-pills gap-1">${tagItems}</ul>`;
 
       if (position === "bottom") {
         gallery.append(tagsRow);

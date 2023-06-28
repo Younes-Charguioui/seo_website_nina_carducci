@@ -13,9 +13,9 @@
 		<link href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap" rel="stylesheet">
 	</head>
 	<body>
-	<div class="top-header">
+	<header class="top-header">
 		<h1 class="name">Nina Carducci</h1>
-		<div class="nav">   
+		<nav class="nav">  
 			<ul>
 				<li><a href="#about">À propos</a></li>
 				<li><a href="#gallery">Galerie</a></li>
@@ -23,8 +23,8 @@
 				<li><a href="#contact">Contact</a></li>
 				<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank" aria-label="Lien vers la page Instagram"><img src="assets/images/instagram.png" alt="logo d'instagram"></a></li>
 			</ul>
-		</div>
-	</div>
+		</nav>
+	</header>
 	<div id="header">
 		<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 			<div class="carousel-indicators">
@@ -33,11 +33,11 @@
 				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
 			</div>
 			<div class="carousel-inner">
-				<div class="carousel-item active">
+				<div class="carousel-item active" >
 					<picture class="d-block w-100">
 						<source media="(min-width: 600px)" srcset="./assets/images/slider/ryoji-iwata-1920.webp">
 					    <source media="(max-width: 600px)" srcset="./assets/images/slider/ryoji-iwata-600.webp">
-					    <img src="./assets/images/slider/ryoji-iwata-1920.webp" alt="Homme marchant sur un passage piétons">
+					    <img loading="lazy" src="./assets/images/slider/ryoji-iwata-1920.webp" alt="Homme marchant sur un passage piétons">
 					</picture>
 				</div>
 				<div class="carousel-item">
@@ -81,7 +81,7 @@
 	</div>
 	<div id="gallery">
 		<h3 class="title">Portfolio</h3>
-		<div class="container py-3">
+		<div class="container py-3" style="width: 80%; margin: auto;">
 			<div class="gallery" style="display: none">
 				<picture class="gallery-item">
 					<source media="(min-width: 300px)" srcset="./assets/images/gallery/concerts/aaron-paul.webp">
@@ -173,12 +173,10 @@
 			</div>
 		</div>
 	</div>
-	<div class="quote">
-		<figure>
-			<blockquote class="quote__text">De manière inconsciente, je crois, je guette un regard, une expression, des traits ou une nostalgie capable de résumer ou plus exactement de révéler une vie</blockquote>
-			<figcaption class="quote__author">- Richard Avedon</figcaption>
-		</figure>
-	</div>
+	<figure class="quote">
+		<blockquote class="quote__text">De manière inconsciente, je crois, je guette un regard, une expression, des traits ou une nostalgie capable de résumer ou plus exactement de révéler une vie</blockquote>
+		<figcaption class="quote__author">- Richard Avedon</figcaption>
+	</figure>
 	<div id="contact">
 		<div class="container">
 			<div class="form-container">

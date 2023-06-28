@@ -138,7 +138,6 @@ body {
 	display: flex;
 	font-size: 24px;
 }
-
 .quote {
 	font-family: 'Spectral';
 	font-style: italic;
@@ -357,6 +356,18 @@ input[type="submit"] {
 	}
 	.picture {
 		width: 80%;
+	}
+	.quote {
+		width: 90%;
+	}
+	.quote__text{
+		font-size: 20px;
+	}
+}
+@media all and (max-width: 315px) {
+	.nav ul {
+		display: flex;
+		flex-direction: column;
 	}
 }
 
