@@ -222,10 +222,10 @@
     },
     showItemTags(gallery, position, tags) {
       var tagItems =
-        '<li class="nav-item"><a class="nav-link active active-tag" href="" onclick="return false" data-images-toggle="all">Tous</a></li>';
+        '<li class="nav-item"><a class="nav-link active active-tag" href="#" onclick="return false" data-images-toggle="all">Tous</a></li>';
       $.each(tags, function(index, value) {
         tagItems += `<li class="nav-item active">
-                <a class="nav-link" href="" onclick="return false" data-images-toggle="${value}">${value}</a></li>`;
+                <a class="nav-link" href="#" onclick="return false" data-images-toggle="${value}">${value}</a></li>`;
       });
       var tagsRow = `<ul class="my-4 tags-bar nav nav-pills gap-1">${tagItems}</ul>`;
 

@@ -72,6 +72,17 @@ body {
 	width: 100%;
 }
 
+#carouselExampleIndicators .carousel-inner {
+	max-height: 25vh;
+	height: 25vh;
+}
+
+#carouselExampleIndicators .carousel-item img{
+	max-height: 25vh;
+	height: 25vh;
+	object-fit: cover;
+}
+
 #about-me {
 	flex: 2
 }
@@ -92,9 +103,8 @@ body {
 	line-height: 1.2;
 	width: 60%;
 }
-
-#gallery {
-	/*	min-height: 100vh; */
+#carouselExampleIndicators .adjust-image{
+	object-fit: cover;
 }
 .title{
 	text-align: center;
@@ -152,7 +162,6 @@ body {
 	font-weight: 300;
 	font-size: 40px;
 	line-height: 48px;
-
 }
 .quote__author {
 	font-family: Spectral;
@@ -322,6 +331,9 @@ input[type="submit"] {
 		right: 0;
 		z-index: -1;
 	}
+	.quote__text{
+		font-size: 20px;
+	}
 }
 
 @media all and (max-width: 650px) {
@@ -359,9 +371,6 @@ input[type="submit"] {
 	}
 	.quote {
 		width: 90%;
-	}
-	.quote__text{
-		font-size: 20px;
 	}
 }
 @media all and (max-width: 315px) {
